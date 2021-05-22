@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int ope,total;
+    int arr[2];
+    std::string choice;
+    bool condition = true;
+    do{
+    cout<<"Calculator";
+    
+    cout<<"Please select operator you want to use \n1 - Addition \n2 - Subtraction \n3 - Multiplication \n4 - Division \nChoose: ";
+    cin>>ope;
+    if(ope == 1){
+        total =0;
+        for(int a=0;a<2;a++){
+            cout << "Please input number[ "<<a+1<<" ]: ";
+            cin >> arr[a];
+        }    
+        total =arr[0]+arr[1];
+        cout << "The sum of "<<arr[0] <<" and "<<arr[1]<<" is = "<<total<< "\n";
+        cout << "Do you want to continue? (Y) yes or (N) no \nChoice: ";
+        cin >> choice;
+        if(choice.compare("N") == 0 || choice.compare("n") == 0)
+        condition = false;
+    }else if(ope == 2){
+        total =0;
+        for(int a=0;a<2;a++){
+            cout << "Please input number[ "<< a+1 <<" ]: ";
+            cin >> arr[a];
+        }
+        total = arr[0]-arr[1];
+        cout << "The subtraction of "<<arr[0] <<" and "<<arr[1]<<" is = "<<total<< "\n";
+        cout << "Do you want to continue? (Y) yes or (N) no \nChoice: ";
+        cin >> choice;
+        if(choice.compare("N") == 0 || choice.compare("n") == 0)
+        condition = false;
+    }else if(ope == 3){
+        total =0;
+        for(int a=0;a<2;a++){
+            cout << "Please input number[ "<< a+1<<" ]: ";
+            cin >> arr[a];
+        }
+        total = arr[0]*arr[1];
+        cout << "The Product of "<<arr[0] <<" and "<<arr[1]<<" is = "<<total<< "\n";
+        cout << "Do you want to continue? (Y) yes or (N) no \nChoice: ";
+        cin >> choice;
+        if(choice.compare("N") == 0 || choice.compare("n") == 0)
+        condition = false;
+    }else if(ope == 4){
+         total =0;
+        for(int a=0;a<2;a++){
+            cout << "Please input number[ "<<a+1<<" ]: ";
+            cin >> arr[a];
+        }
+        total = arr[0]/arr[1];
+        cout << "The Product of "<<arr[0] <<" and "<<arr[1]<<" is = "<<total<< "\n";
+        cout << "Do you want to continue? (Y) yes or (N) no \nChoice: ";
+        cin >> choice;
+        if(choice.compare("N") == 0 || choice.compare("n") == 0)
+        condition = false;
+    }
+    }while(condition);
+    return 0;
+}

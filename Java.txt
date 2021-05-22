@@ -1,0 +1,97 @@
+import java.util.*;
+
+public class Calcu
+{
+	public static void main(String[] args)
+	{
+
+
+		Scanner input = new Scanner (System.in);
+		double x, y;
+		double operation;
+		String getChar;
+		String chooseOperation;
+
+		do
+		{ 
+			System.out.println("Choose your operation:");
+			System.out.println("A. Addition");
+			System.out.println("B. Subraction");
+			System.out.println("C. Multiplication");
+			System.out.println("D. Division");
+
+			chooseOperation = input.nextLine();
+
+			if ((chooseOperation.equals("A")) || (chooseOperation.equals("a")))
+			{
+				do
+				{
+					System.out.println("You Choose Addition");
+					System.out.println("Input the first number: ");
+					x = Double.parseDouble(input.nextLine());
+					System.out.println("Input the second number: ");
+					y = Double.parseDouble(input.nextLine());
+					operation = x+y;
+					System.out.println("The sum is :"+operation);
+					System.out.println("Continue using addition? Choose ( Y) if yes, Otherwise Choose (N)");
+					getChar=input.nextLine();
+				}while((getChar.equals("Y"))||(getChar.equals("y")));
+			}
+
+			else if ((chooseOperation.equals("B")) || (chooseOperation.equals("b")))
+			{
+				do
+				{
+					System.out.println("You Choose Subtraction");
+					System.out.println("Input the first number: ");
+					x = Double.parseDouble(input.nextLine());
+					System.out.println("Input the second number: ");
+					y = Double.parseDouble(input.nextLine());
+					operation = x-y;
+					System.out.println("The difference is :"+operation);
+					System.out.println("Continue using subtraction? Choose ( Y) if yes, Otherwise choose (N)");
+					getChar=input.nextLine();
+				}while((getChar.equals("Y"))||(getChar.equals("y")));
+			}
+
+			else if ((chooseOperation.equals("C")) || (chooseOperation.equals("c")))
+			{
+				do
+				{
+					System.out.println("You Choose Multiplication");
+					System.out.println("Input the first number: ");
+					x = Double.parseDouble(input.nextLine());
+					System.out.println("Input the second number: ");
+					y = Double.parseDouble(input.nextLine());
+					operation = x*y;
+					System.out.println("The product is :"+operation);
+					System.out.println("Continue using multiplication? Choose (Y) if yes, Otherwise choose (N)");
+					getChar=input.nextLine();
+				}while((getChar.equals("Y"))||(getChar.equals("y")));
+			}
+
+			else if ((chooseOperation.equals("D")) || (chooseOperation.equals("d")))
+			{
+				do
+				{
+					System.out.println("You Choose Division");
+					System.out.println("Input the first number: ");
+					x = Double.parseDouble( input.nextLine());
+					System.out.println("Input the second number: ");
+					y = Double.parseDouble(input.nextLine());
+					operation = x/y;
+					System.out.println("The quotient is :"+operation);
+					System.out.println("Continue using division? Choose (Y) if yes, Otherwise Choose (N)");
+					getChar=input.nextLine();
+				}while((getChar.equals("Y"))||(getChar.equals("y")));
+			}
+			else
+			{
+				System.out.println("You entered an invalid selection!");
+			}
+			System.out.println("Do you want to continue? Choose (Y) if yes. Otherwise Choose (N)");
+			getChar=input.nextLine();
+		}while((getChar.equals("Y"))||(getChar.equals("y")));
+
+	} 
+}
